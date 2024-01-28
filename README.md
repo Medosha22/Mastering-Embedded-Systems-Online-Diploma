@@ -3,8 +3,16 @@
 <br />
 # Contents
 ## First Term  https://progress-bar.dev/<10%>?title=<In_Progress>
-        -Unit1: Diploma Prerequisites https://progress-bar.dev/<100%>
-        *Unit2: C Programming https://progress-bar.dev/<40%>
-        +Unit3: Embedded C https://progress-bar.dev/<0%>
-        -Unit4: System Architect https://progress-bar.dev/<0%>
-        *Unit5: First Term Projects https://progress-bar.dev/<0%> 
+<div
+  role="progressbar"
+  aria-hidden={!active}
+  aria-valuetext={active ? "Loading" : undefined}
+  className="fixed inset-x-0 top-0 z-50 h-1 animate-pulse"
+>
+  <div
+    className={cx(
+      "h-full bg-gradient-to-r from-blue-500 to-cyan-500 transition-all duration-500 ease-in-out",
+      active ? "w-full" : "w-0 opacity-0 transition-none"
+    )}
+  />
+</div>
